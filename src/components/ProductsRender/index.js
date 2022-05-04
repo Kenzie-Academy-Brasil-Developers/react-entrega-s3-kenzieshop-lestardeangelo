@@ -1,16 +1,16 @@
 import { useSelector } from "react-redux";
 import Product from "../ProductCard";
-import {} from './styles'
+import { Container } from './styles'
 
 const Products = () => {
   const products = useSelector(({ products }) => products);
 
   return (
-    <div>
+    <Container>
       {products.map((product) => (
         <Product key={product.id} product={product} />
       ))}
-    </div>
+    </Container>
   );
 };
 

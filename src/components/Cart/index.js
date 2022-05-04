@@ -1,16 +1,16 @@
 import { useSelector } from "react-redux";
 import Product from "../ProductCard";
-import {} from './styles'
+import { Container } from './styles'
 
-const Cart = () => {
+const Cart = ({display}) => {
   const cart = useSelector(({ cart }) => cart);
 
   return (
-    <div>
+    <Container display={display}>
       {cart.map((product) => (
         <Product key={product.id} product={product} isRemovable></Product>
       ))}
-    </div>
+    </Container>
   );
 };
 

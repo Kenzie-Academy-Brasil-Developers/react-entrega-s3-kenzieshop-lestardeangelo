@@ -8,7 +8,6 @@ const defaultState = [
 ];
 
 const productsReducer = (state = defaultState, action) => {
-  console.log("Products", action);
   return state;
 };
 

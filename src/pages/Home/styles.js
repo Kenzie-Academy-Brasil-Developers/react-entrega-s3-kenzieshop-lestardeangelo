@@ -4,14 +4,8 @@ import styled from "styled-components";
 export const Container = styled.div`
 
     display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    height: 100vh;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    width: 100vh;
+    flex-direction: column;
 
 `
 export const Content = styled.div`
@@ -33,6 +27,7 @@ export const Header = styled.div`
         flex-direction: row;
         flex-wrap: wrap;
         height: 75px;
+        background: var(--grey4)
     }
  
     h1{
@@ -43,7 +38,7 @@ export const Header = styled.div`
         width: 68px;
         height: 32px;
         color: var(--grey0);
-        background-color: var(--grey3);
+        background-color: var(--red2);
         margin-top: 0px;
     }
 
