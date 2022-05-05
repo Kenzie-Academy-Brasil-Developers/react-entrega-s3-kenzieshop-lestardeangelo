@@ -3,7 +3,7 @@ import Product from "../ProductCard";
 import { Container } from './styles'
 
 const Products = () => {
-  const products = useSelector(({ products }) => products);
+  const products = useSelector(({ products }) => products)
 
   return (
     <Container>
@@ -14,4 +14,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Products

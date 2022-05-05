@@ -1,19 +1,18 @@
-const cartReducer = (state = [], action) => {
+const cartReducer = (
+  state = JSON.parse(localStorage.getItem("cart")) || [],action) => {
 
-  switch (action.type) {
+    switch (action.type) {
 
-    case "@cart/ADD":
-      const { product } = action
-      return [...state, product]
+      case "@cart/ADD":
+        const { product } = action
+        return [...state, product]
 
-    case "@cart/REMOVE":
-      const { id } = action
-      const newList = state.filter((product) => product.id !== id)
+      case "@cart/REMOVE":
+        const { list } = action
+        return list
 
-      return newList
-
-    default:
-      return state
+      default:
+        return state
   }
 }
 

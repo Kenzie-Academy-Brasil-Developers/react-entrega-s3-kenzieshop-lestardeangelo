@@ -1,31 +1,37 @@
 import { useDispatch } from "react-redux";
-import { removeFromCart, addToCart } from "../../store/modules/cart/actions";
-import { Container, DescriptionContainer, NameContainer, PriceContainer, Content } from './styles'
+import { Container, DescriptionContainer, NameContainer, PriceContainer, ImageContainer, styleContainer} from './styles'
 import Button from '../Button'
+import {addToCartMiddler, removeFromCartMiddler} from '../../store/modules/cart/middler'
 
 
-const Product = ({ product, isRemovable = false }) => {
+const Product = ({ product, isRemovable}) => {
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
-  const { id, name, price, description, image, } = product;
+  const { id, name, price, description, image, } = product
 
-  return (
-    <Container>
-        <NameContainer>{name}</NameContainer>
-        <DescriptionContainer>{description}</DescriptionContainer>
-        <PriceContainer>{price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</PriceContainer>
-        {isRemovable ? (
-          <Button onClick={() => dispatch(removeFromCart(id))}>
-            Remover
+  return (<>
+      {isRemovable ? (
+        <Container>
+          <ImageContainer src={image} alt={name}/>
+          <NameContainer>{name}</NameContainer>
+          <Button onClick={() => dispatch(removeFromCartMiddler(id))}>
+            Remover item
           </Button>
-        ) : (
-          <Button onClick={() => dispatch(addToCart(product))}>
+        </Container>
+      ) : (
+        <Container>
+          <ImageContainer src={image} alt={name}/>
+          <NameContainer>{name}</NameContainer>
+          <DescriptionContainer>{description}</DescriptionContainer>
+          <PriceContainer>{price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</PriceContainer>
+          <Button onClick={() => dispatch(addToCartMiddler(product))}>
             Adicionar
           </Button>
-        )}
-    </Container>
-  );
-};
+       </Container>
+      )}
+    </>
+  )
+}
 
-export default Product;
+export default Product

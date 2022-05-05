@@ -1,5 +1,5 @@
-import GlobalStyle from "./styles/global";
-import  Routes  from "./routes";
+import GlobalStyle from "./styles/global"
+import  Routes  from "./routes"
 
 function App() {
   return (
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

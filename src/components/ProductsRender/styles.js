@@ -2,9 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.ul`
 
+    overflow-x: scroll;
     display: flex;
-    flex-direction: column;
-    margin: 15px 5px 5px 5px;
-    align-items: center;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 10px;
+    height: 390px;
 
 `
