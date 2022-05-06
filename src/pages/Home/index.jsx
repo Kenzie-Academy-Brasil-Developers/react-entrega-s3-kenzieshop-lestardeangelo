@@ -3,6 +3,7 @@ import Button from '../../components/Button'
 import Products from "../../components/ProductsRender"
 import Cart from "../../components/Cart"
 import {useState} from 'react'
+import cartimage from  '../../assets/cart.svg'
 
 function Home(){
 
@@ -22,7 +23,9 @@ function Home(){
     <Header>
         <header>
             <h1>Kenzie Shop</h1>
-            <Button onClick={() => GoToCart()}>Carrinho</Button>
+            <Button onClick={() => GoToCart()}>
+                <img src={cartimage} alt="carrinho de compras" />
+            </Button>
         </header>
     </Header>
     

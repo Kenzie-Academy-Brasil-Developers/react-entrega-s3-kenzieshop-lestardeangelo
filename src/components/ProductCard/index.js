@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { Container, DescriptionContainer, NameContainer, PriceContainer, ImageContainer, styleContainer} from './styles'
 import Button from '../Button'
 import {addToCartMiddler, removeFromCartMiddler} from '../../store/modules/cart/middler'
-
+import trashIcon from '../../assets/trash.png'
 
 const Product = ({ product, isRemovable}) => {
 
@@ -16,7 +16,7 @@ const Product = ({ product, isRemovable}) => {
           <ImageContainer src={image} alt={name}/>
           <NameContainer>{name}</NameContainer>
           <Button onClick={() => dispatch(removeFromCartMiddler(id))}>
-            Remover item
+            <img src={trashIcon} alt="remover item" />
           </Button>
         </Container>
       ) : (

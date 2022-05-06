@@ -35,7 +35,7 @@ export const Container = styled.ul`
         font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 24px;
         width: 85px;
         text-align: center;
@@ -65,7 +65,7 @@ export const Container = styled.ul`
         color: var(--grey2);
         border-color: transparent;
         background: transparent;
-        width: 55px;
+        width: 40px;
         top: -30px;
     }
 

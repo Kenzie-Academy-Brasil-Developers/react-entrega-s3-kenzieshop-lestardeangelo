@@ -36,13 +36,20 @@ export const Header = styled.div`
 
     button{
 
-        width: 68px;
-        height: 32px;
+        width: 35px;
+        height: 34px;
         color: var(--grey0);
         margin-top: 0px;
-        background-image: url(../../svgs/cart2.png);
-        background-repeat: no-repeat;
-        background-position: center center ;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background: var(--grey0);
+
+        img{
+            width: 31px;
+            height: 28px; 
+        }
         
     }
 

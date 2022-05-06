@@ -31,6 +31,12 @@ export const Container = styled.li`
         line-height: 17px;
         color: var(--grey0);
 
+        img{
+            width: 25px;
+            height: 25px;
+            background: transparent;
+        }
+
     }
 
 `
