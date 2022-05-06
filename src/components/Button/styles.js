@@ -7,5 +7,6 @@ export const Container = styled.button`
     border: 1px solid var(--black);
     width: 8vh;
     font-size: 13px;
+    cursor: pointer;
 
 `

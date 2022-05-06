@@ -36,8 +36,6 @@ export const Container = styled.ul`
         font-size: 16px;
     }
 
-    
-
     button{
 
         position: relative;
