@@ -1,8 +1,9 @@
 import { useDispatch } from "react-redux";
-import { Container, DescriptionContainer, NameContainer, PriceContainer, ImageContainer, styleContainer} from './styles'
+import { Container, DescriptionContainer, NameContainer, PriceContainer, ImageContainer, ContainerCartDescription, ImgBuy, ImgRemove } from './styles'
 import Button from '../Button'
 import {addToCartMiddler, removeFromCartMiddler} from '../../store/modules/cart/middler'
 import trashIcon from '../../assets/trash.png'
+import cartIcon from '../../assets/cart.png'
 
 const Product = ({ product, isRemovable}) => {
 
@@ -14,9 +15,12 @@ const Product = ({ product, isRemovable}) => {
       {isRemovable ? (
         <Container>
           <ImageContainer src={image} alt={name}/>
-          <NameContainer>{name}</NameContainer>
+          <ContainerCartDescription>
+            <NameContainer>{name}</NameContainer>
+            <PriceContainer>{price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</PriceContainer>
+          </ContainerCartDescription>
           <Button onClick={() => dispatch(removeFromCartMiddler(id))}>
-            <img src={trashIcon} alt="remover item" />
+            <ImgRemove src={trashIcon} alt="remover item" />
           </Button>
         </Container>
       ) : (
@@ -26,7 +30,7 @@ const Product = ({ product, isRemovable}) => {
           <DescriptionContainer>{description}</DescriptionContainer>
           <PriceContainer>{price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</PriceContainer>
           <Button onClick={() => dispatch(addToCartMiddler(product))}>
-            Adicionar
+          <ImgBuy src={cartIcon} alt="adicionar item" />
           </Button>
        </Container>
       )}

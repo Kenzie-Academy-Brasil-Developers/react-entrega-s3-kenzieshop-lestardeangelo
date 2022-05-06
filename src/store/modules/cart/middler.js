@@ -15,16 +15,17 @@ export const addToCartMiddler = (product, isRemovable = true) => {
       dispatch(addToCart(product))
 
     }
-  }
+}
   
-  export const removeFromCartMiddler = (id) => (dispatch, getStore) => {
+export const removeFromCartMiddler = (id) => (dispatch, getStore) => {
 
     const { cart } = getStore()
 
     const list = cart.filter((product) => product.id !== id)
-
+    
     localStorage.setItem("cart", JSON.stringify(list))
 
     dispatch(removeFromCart(list))
+  
+}
 
-  }

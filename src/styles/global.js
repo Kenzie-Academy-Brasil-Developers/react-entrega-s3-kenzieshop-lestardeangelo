@@ -20,12 +20,16 @@ export default createGlobalStyle`
         --red2: #59323F;
         --black: #000000;
         --green: #27AE60;
+        --green2: #00bcd4;
+        --green3: #79c7cd;
+        --green4: #00bcd459;
+        --orange: #ce6537;
         
     }
 
     body{
         
-        background: var(--grey0);
+        background: var(--green4);
         color: var(--black);
         margin: 0;
     }

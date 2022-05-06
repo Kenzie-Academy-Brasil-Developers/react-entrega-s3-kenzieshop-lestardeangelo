@@ -11,7 +11,7 @@ const Products = () => {
         <Product key={product.id} product={product} />
       ))}
     </Container>
-  );
-};
+  )
+}
 
 export default Products
